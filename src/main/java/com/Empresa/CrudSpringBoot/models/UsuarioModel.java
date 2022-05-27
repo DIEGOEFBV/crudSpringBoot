@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "usuario")
 public class UsuarioModel {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -12,7 +13,15 @@ public class UsuarioModel {
 
     private String nombre;
     private String correo;
-    private String prioridad;
+    private Integer prioridad;
+
+    public void setPrioridad(Integer prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    public Integer getPrioridad() {
+        return prioridad;
+    }
 
     public Long getId() {
         return id;
@@ -36,13 +45,5 @@ public class UsuarioModel {
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public String getPrioridad() {
-        return prioridad;
-    }
-
-    public void setPrioridad(String prioridad) {
-        this.prioridad = prioridad;
     }
 }
