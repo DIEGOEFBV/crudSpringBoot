@@ -37,7 +37,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/nombre")
-    public ArrayList<UsuarioModel> obtenerUsuarioPorPrioridad(@RequestParam("nombre") String nombre){
+    public ArrayList<UsuarioModel> obtenerUsuarioPorNombre(@RequestParam("nombre") String nombre){
         return this.usuarioService.obtenerPorNombre(nombre);
     }
 
