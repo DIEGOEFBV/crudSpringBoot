@@ -12,6 +12,8 @@ public class UsuarioModel {
     private Long id;
 
     private String nombre;
+
+//    @Column(name = "correo",length = 60, nullable = false, unique = true)
     private String correo;
     private Integer prioridad;
 
